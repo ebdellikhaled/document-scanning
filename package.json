@@ -4,7 +4,7 @@
   "description": "The demo shows how to use HTML5 to create a simple online document scanning app for Windows, Linux and macOS with Dynamic Web TWAIN",
   "main": "server.js",
   "dependencies": {
-    "dwt": "^11.3.0",
+    "dwt": "^11.3.2",
     "express": "^4.13.3"
   },
   "devDependencies": {},

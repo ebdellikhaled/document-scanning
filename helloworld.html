@@ -21,7 +21,10 @@
         function Dynamsoft_OnReady() {
             DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');    // Get the Dynamic Web TWAIN object that is embeded in the div with id 'dwtcontrolContainer'
             if (DWObject) {
-		        DWObject.ImageCaptureDriverType = 3;
+                if (window.navigator.platform.indexOf("Linux") !== -1) {
+                    DWObject.ImageCaptureDriverType = 3;
+                }
+		            
                 var count = DWObject.SourceCount;
                 for (var i = 0; i < count; i++)
                     document.getElementById("source").options.add(new Option(DWObject.GetSourceNameItems(i), i)); // Get Data Source names from Data Source Manager and put them in a drop-down box
