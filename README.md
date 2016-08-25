@@ -5,7 +5,7 @@ The demo shows how to create a simple online document scanning app for Windows, 
 1. Download Dynamic Web TWAIN:
 
     ```
-    npm install dwt
+    npm install
     ```
 2. Run the project:
 
