@@ -26,8 +26,8 @@ The demo shows how to create a simple online document scanning app for Windows, 
 When creating a new HTML document, you need to include following JavaScript files:
 
 ```
-<script type="text/javascript" src="node_modules/dwt/dist/dynamsoft.webtwain.initiate.js"></script>
-<script type="text/javascript" src="node_modules/dwt/dist/dynamsoft.webtwain.config.js"></script>
+<script type="text/javascript" src="<Resource Directory>/dynamsoft.webtwain.initiate.js"></script>
+<script type="text/javascript" src="<Resource Directory>/dynamsoft.webtwain.config.js"></script>
 ```
 In addition, change the resource path in **node_modules/dwt/dist/dynamsoft.webtwain.config.js**:
 
