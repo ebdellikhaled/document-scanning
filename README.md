@@ -1,5 +1,5 @@
 # Document Scanning for Windows, Linux and macOS
-The demo shows how to create a simple online document scanning app for Windows, Linux and macOS with Dynamic Web TWAIN and JavaScript.
+The demo shows how to create a simple online document scanning app for Windows, Linux and macOS with [Dynamic Web TWAIN][1] and JavaScript.
 
 ## Getting Started
 1. Download the project and get into the project folder:
@@ -52,3 +52,5 @@ if (DWObject) {
         document.getElementById("source").options.add(new Option(DWObject.GetSourceNameItems(i), i)); // Get Data Source names from Data Source Manager and put them in a drop-down box
 }
 ```
+
+[1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
