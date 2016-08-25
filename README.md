@@ -1,33 +1,44 @@
 # Document Scanning for Windows, Linux and macOS
-The demo shows how to create a simple online document scanning app for Windows, Linux and macOS with Dynamic Web TWAIN and JavaScript.
+The demo shows how to create a simple online document scanning app for Windows, Linux and macOS with [Dynamic Web TWAIN][1] and JavaScript.
 
 ## Getting Started
-1. Download Dynamic Web TWAIN:
+1. Download the project and get into the project folder:
 
     ```
-    npm install dwt
+    git clone https://github.com/yushulx/document-scanning.git
+    cd document-scanning
     ```
-2. Run the project:
+2. Install **express** and **Dynamic Web TWAIN**:
+
+    ```
+    npm install
+    ```
+3. Run the project:
 
     ```
     node server.js
     ```
-3. Open **http://localhost:2016/helloworld.html** in **Chrome**.
-4. Click the popup dialog to install scanning service for different platforms.
-5. Select a scanner source and scan documents.
+4. Edit **node_modules/dwt/dist/dynamsoft.webtwain.config.js**:
+ 
+    ```
+    Dynamsoft.WebTwainEnv.ResourcesPath = 'node_modules/dwt/dist/';
+    ```
+5. Open **http://localhost:2016/helloworld.html** in **Chrome**.
+6. Click the popup dialog to install scanning service for different platforms.
+7. Select a scanner source and scan documents.
 
 
 ## Resource Path
 When creating a new HTML document, you need to include following JavaScript files:
 
 ```
-<script type="text/javascript" src="node_modules/dwt/dist/dynamsoft.webtwain.initiate.js"></script>
-<script type="text/javascript" src="node_modules/dwt/dist/dynamsoft.webtwain.config.js"></script>
+<script type="text/javascript" src="<Resource Directory>/dynamsoft.webtwain.initiate.js"></script>
+<script type="text/javascript" src="<Resource Directory>/dynamsoft.webtwain.config.js"></script>
 ```
 In addition, change the resource path in **node_modules/dwt/dist/dynamsoft.webtwain.config.js**:
 
 ```
-Dynamsoft.WebTwainEnv.ResourcesPath = 'node_modules/dwt/dist/';
+Dynamsoft.WebTwainEnv.ResourcesPath = '<Resource Directory>';
 ```
 
 ## Code for Linux
@@ -41,3 +52,5 @@ if (DWObject) {
         document.getElementById("source").options.add(new Option(DWObject.GetSourceNameItems(i), i)); // Get Data Source names from Data Source Manager and put them in a drop-down box
 }
 ```
+
+[1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
