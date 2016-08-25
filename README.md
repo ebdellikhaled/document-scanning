@@ -12,9 +12,14 @@ The demo shows how to create a simple online document scanning app for Windows, 
     ```
     node server.js
     ```
-3. Open **http://localhost:2016/helloworld.html** in **Chrome**.
-4. Click the popup dialog to install scanning service for different platforms.
-5. Select a scanner source and scan documents.
+3. Edit **node_modules/dwt/dist/dynamsoft.webtwain.config.js**:
+ 
+    ```
+    Dynamsoft.WebTwainEnv.ResourcesPath = 'node_modules/dwt/dist/';
+    ```
+4. Open **http://localhost:2016/helloworld.html** in **Chrome**.
+5. Click the popup dialog to install scanning service for different platforms.
+6. Select a scanner source and scan documents.
 
 
 ## Resource Path
@@ -27,7 +32,7 @@ When creating a new HTML document, you need to include following JavaScript file
 In addition, change the resource path in **node_modules/dwt/dist/dynamsoft.webtwain.config.js**:
 
 ```
-Dynamsoft.WebTwainEnv.ResourcesPath = 'node_modules/dwt/dist/';
+Dynamsoft.WebTwainEnv.ResourcesPath = '<Resource Directory>';
 ```
 
 ## Code for Linux
