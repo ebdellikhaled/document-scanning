@@ -53,4 +53,8 @@ if (DWObject) {
 }
 ```
 
+## Blog
+[JavaScript Document Scanning for Windows, Linux and macOS][2]
+
 [1]:http://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx
+[2]:http://www.codepool.biz/javascript-document-scanning-windows-linux-mac.html
